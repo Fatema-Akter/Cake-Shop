@@ -322,3 +322,19 @@ body{
     color: var(--mainWhite);
 }
 /*============end of store============*/
+/*============services============*/
+.services{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/servicesBcg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--mainWhite);
+}
+.service-title{
+    letter-spacing: 0.5rem;
+}
+.service-text{
+    word-spacing: 0.5rem;
+}
+/*==========end of service==========*/
