@@ -338,3 +338,44 @@ body{
     word-spacing: 0.5rem;
 }
 /*==========end of service==========*/
+/*==========blog===========*/
+.blog{
+    font-size: 0.95rem;
+}
+.blog-img{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.blog-image{
+    transition: all 1s ease-in-out;
+}
+.blog-img:hover .blog-image{
+    transform: scale(1.2);
+}
+.blog-text{
+    position: absolute;
+    bottom: 0;
+    padding: 0.75rem;
+    background: var(--mainPink);
+    transition: all 1s ease-in-out;
+    transform: translate(100%, 100%);
+}
+.blog-img:hover .blog-text{
+    transform: translate(0, 0);
+}
+.blog a{
+    color: var(--mainBlack);
+}
+.blog-ico .badge{
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+.blog-ico .badge-primary{
+    background: var(--mainPink);
+    color: var(--mainBlack);
+}
+/*===========end of blog===========*/
