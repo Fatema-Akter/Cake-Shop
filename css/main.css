@@ -456,3 +456,10 @@ body{
 .contact-info{
     font-size: 0.9rem;
 }
+.review .svg-inline--fa.fa-w-18 {
+    width: 0.9rem;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--mainPink)!important;
+}
+/*============end of about-details.html page styles===========*/
