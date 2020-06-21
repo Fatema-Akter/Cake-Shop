@@ -379,3 +379,43 @@ body{
     color: var(--mainBlack);
 }
 /*===========end of blog===========*/
+/*===========contact===========*/
+.contact{
+    background: var(--mainBlack);
+    color: #D7E1E1;
+}
+.contact-icon{
+    font-size: 1.5rem;
+    transition: all 0.3 ease-in-out;
+    color: var(--mainPink);
+}
+.contact-icon:hover{
+    color: var(--mainblack);
+}
+.contact .card{
+    background: var(--mainBlack);
+    border-radius: 0;
+}
+.contact .form-control{
+    background: var(--mainBlack);
+}
+.contact h4{
+    background: url(../images/h1_bg.png) left bottom repeat-x;
+    padding: 0.7rem 0rem;
+}
+@media only screen and (max-width: 571px) {
+    .map{
+        padding: 0rem;
+    }
+} 
+/*===========end of contact section===========*/
+/*===========footer===========*/
+.footer{
+    background: var(--mainBlack);
+    color: var(--mainWhite);
+    background-image: url(../images/bottline_bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    font-size: 0.9rem;
+}
+/*============end of footer===========*/
