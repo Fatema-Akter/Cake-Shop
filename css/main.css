@@ -463,3 +463,9 @@ body{
     background: var(--mainPink)!important;
 }
 /*============end of about-details.html page styles===========*/
+/*============blog.html page styles============*/
+.blog-content p{
+    word-spacing: 0.1rem;
+    text-align: justify;
+}
+/*============end of blog.html page styles============*/

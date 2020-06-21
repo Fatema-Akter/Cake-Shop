@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script>
+</head>
+<body>
+<!--header-->
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="#" class="navbar-brand">
+            <!-- 
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/logo.png" alt="main icon">
+        </a>
+        <!-- end of logo-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="toggler-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">about</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#store" class="nav-link">store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#cakes" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blog" class="nav-link">blog</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="nav-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="mb-0">+ 123 456 789</p>
+                </div>
+                <!--end of phone info-->
+                <!--cart info-->
+                <div id="cart-info" class="nav-info align-items-center d-flex justify-content-between mx-lg-5 cart-info">
+                    <span class="cart-info_icon mx-lg-3">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="mb-0 text-capitalize">
+                        <span id="item-count">2</span> items - $
+                        <span id="total"></span>10.9
+                    </p>
+                    <!--cart-->
+                    <div class="cart" id="cart">
+                        <!--single cart item-->
+                        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                            <img src="images-cart/cake-1.jpg" alt="" class="img-fluid rounded-circle">
+                            <div class="item-text">
+                                <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                                <span>$</span>
+                                <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                            </div>
+                            <a href="#" id="cart-item-remove" class="cart-item-remove">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                        <!--end of single cart item-->
+                        <!--single cart item-->
+                        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                            <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                            <div class="item-text">
+                                <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                                <span>$</span>
+                                <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                            </div>
+                            <a href="#" id="cart-item-remove" class="cart-item-remove">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                        <!--end of single cart item-->
+                        <!--total price-->
+                        <div class="cart-total-container d-flex justify-content-around
+                        text-capitalize mt-5">
+                            <h5> total </h5>
+                            <h5> $ <strong id="cart-total" class="font-weight-bold"> 10.00 </strong></h5>
+                        </div>
+                        <!--end of total price-->
+                        <!--cart button-->
+                        <div class="cart-button-container mt-3 d-flex justify-content-between text-uppercase">
+                            <a href="#" class="btn btn-black" id="clear-cart">clear cart
+                            </a>
+                            <a href="#" class="btn btn-pink" id="checkout">checkout
+                            </a>
+                        </div>
+                        <!--end of cart button-->
+                    </div>
+                    <!--end of cart-->
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+    <!--end of navbar-->
+</header>
+<!--modal section-->
+<div class="modal fade" id="cart-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-capitalize">first pay now</h4>
+                <button type="button" class="close" data-dismiss="modal">&times</button>
+            </div>
+            <div class="modal-body">
+                <!--cart-->
+                <div class="form-cart" id="cart">
+                    <!--single cart item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cake-1.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of single cart item-->
+                    <!--single cart item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of single cart item-->
+                    <!--total price-->
+                    <div class="cart-total-container d-flex justify-content-around
+                    text-capitalize mt-5">
+                        <h5> total </h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold"> 10.00 </strong></h5>
+                    </div>
+                    <!--end of total price-->
+                    <!--cart button-->
+                    <div class="cart-button-container mt-3 d-flex justify-content-between text-uppercase">
+                        <a href="#" class="btn btn-black" id="clear-cart">clear cart
+                        </a>
+                        <a href="#" class="btn btn-pink" id="checkout">checkout
+                        </a>
+                    </div>
+                    <!--end of cart button-->
+                </div>
+                <!--end of cart-->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-pink" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of header-->
+<!--banner-->
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">cake shop</strong>
+                <div class="service-hour">
+                    <p class="mb-0 text-capitalize text-muted">here you can see our blog details</p>
+                </div>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item"><a href="blog.html">blog-details</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of banner-->
+<!--blog section-->
+<section class="blog py-5">
+    <div class="container">
+        <!--section title-->
+        <div class="row">
+            <div class="col-10 text-center mx-auto col-md-6">
+                <h1 class="text-capitalize"> recent <strong class="banner-title"> news </strong></h1>
+            </div>
+        </div>
+        <!--end od section title-->
+        <div class="row">
+            <div class="col-10 mx-auto py-3">
+                <div class="blog-image">
+                    <img src="images/headerBcg-02.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-10 mx-auto pt-3">
+                <div class="blog-content">
+                    <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum quis beatae nisi eaque, earum necessitatibus voluptate suscipit omnis reiciendis iusto consequuntur expedita vel minima repellat perferendis ratione nemo et mollitia ipsum porro! Illo, sit deleniti corporis quo cum eveniet accusamus officia illum aliquid qui, magnam inventore consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum quis beatae nisi eaque, earum necessitatibus voluptate suscipit omnis reiciendis iusto consequuntur expedita vel minima repellat perferendis ratione nemo et mollitia ipsum porro! Illo, sit deleniti corporis quo cum eveniet accusamus officia illum aliquid qui, magnam inventore consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum quis beatae nisi eaque, earum necessitatibus voluptate suscipit omnis reiciendis iusto consequuntur expedita vel minima repellat perferendis ratione nemo et mollitia ipsum porro! Illo, sit deleniti corporis quo cum eveniet accusamus officia illum aliquid qui, magnam inventore consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea molestiae nostrum quis beatae nisi eaque, earum necessitatibus voluptate suscipit omnis reiciendis iusto consequuntur expedita vel minima repellat perferendis ratione nemo et mollitia ipsum porro! Illo, sit deleniti corporis quo cum eveniet accusamus officia illum aliquid qui, magnam inventore consequatur.
+                    </p>
+                </div>
+                <div class="blog-ico">
+                    <span class="badge badge-primary">like</span>
+                    <span class="badge badge-primary">comment</span>
+                    <span class="badge badge-primary">share</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of blog section-->
+<!--contact section-->
+<section class="map py-2">
+    <div class="container">
+        <div class="row">
+            <!--section title-->
+            <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize"> contact <strong class="banner-title"> us </strong></h1>
+            </div>
+            <!--end of section title-->
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!--google map-->
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.27923710646989!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1588189120541!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">contact form</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--message-->
+                            <div class="form-group mb-0">
+                                <textarea name="message" class="form-control mb-2" placeholder="Your Message" id="message" rows="2"></textarea>
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink btn-block text-uppercase">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">how to find us</h4>
+                <!--contact info-->
+                <div class="contact-details px-4">
+                    <dl>
+                        <dt><h5 class="mt-3">cake shop</h5></dt>
+                        <dd>addresss : 123 main street, dhaka 1234</dd>
+                        <dd>phone : +11 123 456 789</dd>
+                        <dd>phone : +11 123 456 789</dd>
+                        <dd>email : mail@gmail.com</dd>
+                    </dl>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="contact-icon">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                </div>
+                <!--end of contact info-->
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 px-4 py-3">
+                <h4 class="text-capitalize text-pink px-4">sign up now</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form">
+                            <!--name-->
+                            <div class="form-group mb-0">
+                                <label for="name" class="text-capitalize mb-0">**name**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your Name" id="name">
+                            </div>
+                            <!--email-->
+                            <div class="form-group mb-0">
+                                <label for="email" class="text-capitalize mb-0">**email**</label>
+                                <input type="text" class="form-control mb-2" placeholder="Enter your E-mail" id="email">
+                            </div>
+                            <!--send button-->
+                            <button type="submit" class="btn btn-pink text-uppercase mt-3">sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of contact section-->
+<!--footer-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 mx-auto text-center">
+                <p class="mb-0 p-3 text-capitalize">all copyright reserved @2020.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+<!--jquery-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--bootstrap js-->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!--main js-->
+<script src="js/main.js"></script>
+</body>
+</html>
