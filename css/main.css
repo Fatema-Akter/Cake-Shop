@@ -450,3 +450,9 @@ body{
     text-decoration: none;
     border-bottom: 3px solid var(--mainPink);
 }
+.team .card{
+    margin: 1rem;
+}
+.contact-info{
+    font-size: 0.9rem;
+}
