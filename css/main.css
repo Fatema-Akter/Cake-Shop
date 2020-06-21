@@ -419,3 +419,34 @@ body{
     font-size: 0.9rem;
 }
 /*============end of footer===========*/
+/*============about-details.html page styles===========*/
+.about-bcg{
+    background: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 0rem;
+}
+.crumbs{
+    position: relative;
+}
+.crumbs .breadcrumb-items{
+    display: inline-block;
+}
+.crumbs .breadcrumb {
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.crumbs .breadcrumb a{
+    color: var(--mainBlack);
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.crumbs .breadcrumb a:hover{
+    color: var(--mainPink);
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+    border-bottom: 3px solid var(--mainPink);
+}

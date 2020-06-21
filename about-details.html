@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cake Shop</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--owl carousel css-->
+    <link rel="stylesheet" href="owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/css/owl.theme.default.min.css">
+    <!--font awesome-->
+    <script src="js/all.js"></script> 
+</head>
+<body>
+<header id="header">
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg mx-4">
+        <!--logo-->
+        <a href="#" class="navbar-brand">
+            <!-- 
+                https://www.iconfinder.com/icons/2138186/baker_bakery_cupcake_dessert_food_icon
+            -->
+            <img src="images/logo.png" alt="main icon">
+         </a>
+         <!-- end of logo-->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="toggler-icon">
+                <i class="fas fa-bars"></i>
+             </span>
+         </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <!--menu-->
+            <ul class="navbar-nav text-capitalize mx-auto" id="menu">
+                 <li class="nav-item active">
+                    <a href="index.html" class="nav-link">home</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">about</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="index.html#store" class="nav-link">store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#cakes" class="nav-link">order</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blog" class="nav-link">blog</a>
+                </li>
+                <li class="nav-item" id="sm-cart">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#cart-modal">cart</a>
+                </li>
+            </ul>
+            <!--end of menu-->
+            <div class="nav-info-items d-none d-lg-flex">
+                <!--phone info-->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="nav-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="mb-0">+ 123 456 789</p>
+                </div>
+                <!--end of phone info-->
+                <!--cart info-->
+                <div id="cart-info" class="nav-info align-items-center d-flex justify-content-between mx-lg-5 cart-info">
+                    <span class="cart-info_icon mx-lg-3">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="mb-0 text-capitalize">
+                        <span id="item-count">2</span> items - $
+                        <span id="total"></span>10.9
+                    </p>
+
+                     <!--cart-->
+                        <div class="cart" id="cart">
+                            <!--single cart item-->
+                            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                                <img src="images-cart/cake-1.jpg" alt="" class="img-fluid rounded-circle">
+                                <div class="item-text">
+                                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                                    <span>$</span>
+                                    <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                                </div>
+                                <a href="#" id="cart-item-remove" class="cart-item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                            <!--end of single cart item-->
+                            <!--single cart item-->
+                            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                                <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                                <div class="item-text">
+                                    <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                                    <span>$</span>
+                                    <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                                </div>
+                                <a href="#" id="cart-item-remove" class="cart-item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                            <!--end of single cart item-->
+                            <!--total price-->
+                            <div class="cart-total-container d-flex justify-content-around
+                            text-capitalize mt-5">
+                                <h5> total </h5>
+                                <h5> $ <strong id="cart-total" class="font-weight-bold"> 10.00 </strong></h5>
+                            </div>
+                            <!--end of total price-->
+                            <!--cart button-->
+                            <div class="cart-button-container mt-3 d-flex justify-content-between text-uppercase">
+                                <a href="#" class="btn btn-black" id="clear-cart">clear cart
+                                </a>
+                                <a href="#" class="btn btn-pink" id="checkout">checkout
+                                </a>
+                            </div>
+                            <!--end of cart button-->
+                        </div>
+                    <!--end of cart-->
+                </div>
+                <!--end of cart info-->
+            </div>
+        </div>
+    </nav>
+    <!--end of navbar-->
+</header>
+<!--modal section-->
+<div class="modal fade" id="cart-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-capitalize">first pay now</h4>
+				<button type="button" class="close" data-dismiss="modal">&times</button>
+            </div>
+            <div class="modal-body">
+                <!--cart-->
+                <div class="form-cart" id="cart">
+                    <!--single cart item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cake-1.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of single cart item-->
+                    <!--single cart item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="images-cart/cupcake-1.jpg" alt="" class="img-fluid rounded-circle">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of single cart item-->
+                    <!--total price-->
+                    <div class="cart-total-container d-flex justify-content-around
+                    text-capitalize mt-5">
+                        <h5> total </h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold"> 10.00 </strong></h5>
+                    </div>
+                    <!--end of total price-->
+                    <!--cart button-->
+                    <div class="cart-button-container mt-3 d-flex justify-content-between text-uppercase">
+                        <a href="#" class="btn btn-black" id="clear-cart">clear cart
+                        </a>
+                        <a href="#" class="btn btn-pink" id="checkout">checkout
+                        </a>
+                    </div>
+                    <!--end of cart button-->
+                </div>
+                <!--end of cart-->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-pink" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of header-->
+<!--about banner-->
+<section class="about-bcg">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto text-center">
+                <h3 class="text-capitalize mb-0"> welcome to our</h3>
+                <strong class="banner-title text-capitalize">cake shop</strong>
+                <div class="service-hour">
+                    <h6 class="text-uppercase"><strong> service hour </strong></h6>
+                    <p class="mb-0 text-capitalize text-muted">09:00 - 12:00 <strong>sturday - thursday</strong></p>
+                    <p class="mb-0 text-capitalize text-muted">03:00 - 12:00 <strong>only friday</strong></p>
+                </div>
+                <div class="crumbs">
+                    <nav aria-level="breadcrumb" class="breadcrumb-items">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                            <li class="breadcrumb-item"><a href="about-details.html">about-details</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of banner-->
+<!--about section-->
+<section class="about-details pt-5">
+    <div class="container">
+        <div class="row bg-gray border-radius-1 p-3">
+            <div class="col-md-6 p-3 d-flex align-items-center justify-content-center">
+                <div class="about-details-content p-3">
+                    <h1 class="text-capitalize"> since <strong class="banner-title"> 2020 </strong></h1>
+                    <p class="lead text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt harum eum quibusdam debitis facere. Temporibus unde quos quisquam cum incidunt!. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt harum eum quibusdam debitis facere. Temporibus unde quos quisquam cum incidunt!
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 p-3">
+                <div class="about-details-img">
+                    <img src="images/about-details.jpg" class="img-fluid img-thumbnail bg-pink" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of about section-->
+
+<!--main js-->
+<script src="js/main.js"></script>
+</body>
+</html>
